@@ -7,7 +7,9 @@
 
 <html>
  <head>
+ 
  <title><sitemesh:write property='title'/></title>
+ <c:set var="path" value="${pageContext.request.contextPath}" scope="request"/>
  <sitemesh:write property='head'/>
 <!-- Latest compiled and minified CSS & JS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -52,6 +54,14 @@ $(".nav li a").on('click', function() {
 			</li>
 			<li>
 				<a href="<c:url value="/login" />">Login</a>
+			</li>
+			<li>
+				
+            <form action="${path}/salir" method="post">
+                <input type="hidden" name="_csrf" value="${_csrf.token}">
+                <a id="btn-salir" type="submit" class="">Salir</a>
+            </form>
+        
 			</li>
 		</ul>
 	</div>

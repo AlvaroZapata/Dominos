@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.empleoDigital</groupId>
-	<artifactId>mastodon</artifactId>
+	<artifactId>Dominos</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 		<repositories>
@@ -152,7 +152,7 @@
 				<configuration>
 					<scanIntervalSeconds>3</scanIntervalSeconds>
 					<webApp>
-						<contextPath>/mastodon</contextPath>
+						<contextPath>/dominos</contextPath>
 					</webApp>
 				</configuration>
 			</plugin>

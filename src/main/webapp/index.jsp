@@ -9,11 +9,9 @@
 <body>
 	<div class="jumbotron">
 	<div class="container">
-		<h1>Hello, world!</h1>
-		<p>Contents ...</p>
-		<p>
-			<a class="btn btn-primary btn-lg">Learn more</a>
-		</p>
+		<h1>Domino's Pizza</h1>
+		<img alt="" src="http://www.ixtapa.com.mx/cat/r_34_2.jpg">
+		
 	</div>
 </div>
 </body>

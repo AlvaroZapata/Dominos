@@ -8,7 +8,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>Pizzara - Login</title>
+		<title>Pizza - Login</title>
 		<!--<c:set var="path" value="${pageContext.request.contextPath}" scope="request"/>
 		--><style type="text/css">
 			
@@ -27,22 +27,22 @@
 	<body>
 		<section id="login" class="panel panel-primary">
 			
-			<c:if test='${not empty param["semacesso"]}'>
+			<c:if test='${not empty param["sinacceso"]}'>
 				<div class="alert alert-warning">
-					Usuario e/ou senha incorretos!
+					Usuario y o contraseña son incorrectos!
 				</div>
 			</c:if>
 			
 			<c:if test='${not empty param["salir"]}'>
 				<div class="alert alert-info">
-					Você agora está fora do sistema!
+					Has salido de la sesion!
 				</div>
 			</c:if>
 			
 			<!--<form action="${path}/autenticar" method="post">-->
 			<form action='<c:url value="/autenticar"/>' method="post">
 				<div class="panel-heading">
-					Pizzaria - Login
+					Pizza - Login
 				</div>
 				
 				<div class="panel-body">

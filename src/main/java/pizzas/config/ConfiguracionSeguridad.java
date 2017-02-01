@@ -17,15 +17,15 @@ public class ConfiguracionSeguridad extends WebSecurityConfigurerAdapter {
 //		auth
 //			.userDetailsService(servicoAutenticacao)
 //			.passwordEncoder(encoder());
-			auth.inMemoryAuthentication().withUser("admin").password("admin").roles("ADMIN");
-			auth.inMemoryAuthentication().withUser("david").password("12345").roles("USER");
+			auth.inMemoryAuthentication().withUser("admin").password("admin").roles("ADMIN").roles("USER");
+			auth.inMemoryAuthentication().withUser("Alvaro").password("1234").roles("USER");
 	}
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http
 			.authorizeRequests()
-				.antMatchers("/pizza/**").hasRole("ADMIN")
+				.antMatchers("/pizza/**","/Ingredientes/**").hasRole("ADMIN")
 				.anyRequest().permitAll()
 		.and()
 			.formLogin()

@@ -14,6 +14,8 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import pizzas.modelo.enumeraciones.CategoriaDePizza;
 
 @Entity
@@ -35,6 +37,7 @@ public class Pizza {
 	private CategoriaDePizza categoria;
 
 	@ManyToMany(fetch = FetchType.EAGER)
+	
 	private Set<Ingredientes> ingredientes;
 
 	public Long getId() {

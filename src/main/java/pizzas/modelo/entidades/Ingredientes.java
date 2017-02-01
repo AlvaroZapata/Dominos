@@ -10,6 +10,8 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import pizzas.modelo.enumeraciones.IngredienteCategoria;
 
 @Entity
@@ -24,6 +26,7 @@ public class Ingredientes {
 
 	@NotNull
 	@Enumerated(EnumType.STRING)
+	
 	private IngredienteCategoria categoria;
 
 	public long getId() {
